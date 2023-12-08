@@ -1,0 +1,144 @@
+https://opensource-demo.orangehrmlive.com/
+
+
+User:
+//div[@class='orangehrm-login-form']/form[@class='oxd-form']/div[@class='oxd-form-row']/div[@class='oxd-input-group oxd-input-field-bottom-space']/div/input[@class='oxd-input oxd-input--active' and @name='username']
+
+OR
+//div[@id='app']/..//input[@class='oxd-input oxd-input--active' and @name='username']
+
+OR
+//input[@class='oxd-input oxd-input--active' and @name='username']
+
+Password: 
+//div[@class='orangehrm-login-form']/form[@class='oxd-form']/div[@class='oxd-form-row']/div[@class='oxd-input-group oxd-input-field-bottom-space']/div/input[@class='oxd-input oxd-input--active' and @name='password']
+
+OR
+//input[@class='oxd-input oxd-input--active' and @name='password']
+
+Login btn: 
+//div[@class='orangehrm-login-form']/form[@class='oxd-form']/div[@class='oxd-form-actions orangehrm-login-action']
+OR
+//div[@id='app']/..//input[@class='oxd-input oxd-input--active' and @name='password']
+
+OR
+//input[@class='oxd-input oxd-input--active' and @name='password']
+
+Forgot password:
+//div[@class = 'orangehrm-login-forgot']//p[@class='oxd-text oxd-text--p orangehrm-login-forgot-header']
+OR
+//p[@class='oxd-text oxd-text--p orangehrm-login-forgot-header']
+
+Search field: 
+//div[@id='app']/..//div[@class='oxd-main-menu-search']
+OR 
+//div[@class='oxd-main-menu-search']
+
+Menu items:
+PIM:
+//a[@href="/web/index.php/pim/viewPimModule"]
+
+Recruitment:
+//a[@href="/web/index.php/recruitment/viewRecruitmentModule"]
+
+Dashboard:
+//span[h6[contains(.,'Dashboard')]]/h6
+
+OR
+//span[@class='oxd-topbar-header-breadcrumb']//h6[contains(., 'Dashboard')]
+
+text element on the page:
+//span[h6[contains(., 'Dashboard')]] 
+
+
+My info: 
+//a[@href = '/web/index.php/pim/viewMyDetails'] 
+
+My info > Contact details: //div[@id='app']/..//div[@class='orangehrm-edit-employee-navigation']/..//div[@role='tablist']//div[2]/a[1]
+OR
+//div[@id='app']/..//..//div[@role='tablist']//div[2]/a[1]
+
+OR
+//a[@href='/web/index.php/pim/contactDetails/empNumber/7']
+
+My info > Contact details >  fields: 
+10 fields wrapper and 1 dropdown
+
+>>Street1:
+//div[label[contains(., 'Street 1')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+>>Street2:
+//div[label[contains(., 'Street 2')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+
+>>City: 
+//div[label[contains(., 'City')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+
+>>State/Province: 
+//div[label[contains(., 'State/Province')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+
+>>Zip/Postal Code:
+//div[label[contains(., 'Zip/Postal Code')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+ 
+>>Country (dropdown selector):
+//div[@class='orangehrm-edit-employee-content']//following-sibling::i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']
+(only selector element, dropdown elements are n/a?!)
+
+Telephone 
+>>Home
+//div[label[contains(., 'Home')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+
+>>Mobile
+//div[label[contains(., 'Mobile')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+
+>>Work
+//div[label[contains(., 'Work')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+
+Email
+>>Work email
+//div[label[contains(., 'Work Email')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+
+>>Other email
+//div[label[contains(., 'Other Email')]]/following-sibling::div//input[contains(@class,'oxd-input oxd-input--active')]
+
+
+Button ‘Save’: 
+//div[@id='app']/..//button[@type='submit']
+OR
+//div[@class='orangehrm-edit-employee-content']/..//button[@type='submit'] 
+(//what is more correct? // Ask @Aleksey?!)
+
+Right dropdown carret element: //div[@id='app']/..//div[@class='oxd-topbar-header-userarea']//i[@class="oxd-icon bi-caret-down-fill oxd-userdropdown-icon"]
+or
+//div[@class='oxd-topbar-header-userarea']//i[@class="oxd-icon bi-caret-down-fill oxd-userdropdown-icon"]
+
+OR
+//i[@class="oxd-icon bi-caret-down-fill oxd-userdropdown-icon"]
+
+
+4 Items in dropdown
+Menu: 
+//div[@class='oxd-topbar-header-userarea']//a[@href="#"]
+
+Support: //div[@class='oxd-topbar-header-userarea']//a[@href='/web/index.php/help/support']
+
+Change password:
+//div[@class='oxd-topbar-header-userarea']//a[@href="/web/index.php/pim/updatePassword"]
+
+Logout:
+//div[@class='oxd-topbar-header-userarea']//a[@href="/web/index.php/auth/logout"]
+
+
+Forgot password page
+Form Text title text
+//form[h6[contains(., 'Reset Password')]]/h6
+
+Input User name field:
+//input[@name='username']
+or
+//div[@class='orangehrm-forgot-password-wrapper']//input[@name='username']
+
+Cancel btn:
+//div[@class='orangehrm-forgot-password-wrapper']//button[contains(., ' Cancel ')]
+
+Submit btn:
+//div[@class='orangehrm-forgot-password-wrapper']//button[contains(., ' Reset Password ')]
+
