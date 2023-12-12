@@ -1,4 +1,4 @@
-Test Atomation Selenium
+Test Automation Selenium
 ## SELENIUM TEST PROJECT SETUP
 1. Create new folder for API_tests project on the PC
 2. Open this folder in VC Code
